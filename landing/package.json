@@ -1,0 +1,26 @@
+{
+  "name": "landing",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxtjs/sitemap": "^7.6.0",
+    "@oxc-parser/binding-win32-x64-msvc": "0.112.0",
+    "@oxc-transform/binding-win32-x64-msvc": "0.112.0",
+    "@pinia/nuxt": "^0.11.3",
+    "nuxt": "^4.0.3",
+    "vue": "^3.5.28",
+    "vue-router": "^4.6.4",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@oxc-minify/binding-win32-x64-msvc": "^0.112.0",
+    "sass": "^1.97.3"
+  }
+}

@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Arkhip";
+  src:
+    local("Arkhip"),
+    url("@/assets/fonts/Arkhip-Regular.woff2") format("woff2"),
+    url("@/assets/fonts/Arkhip-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nudla";
+  src:
+    local("Nudla"),
+    url("@/assets/fonts/Nudla-Thin.woff2") format("woff2"),
+    url("@/assets/fonts/Nudla-Thin.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --containerPadding: clamp(0.5rem, 3.5vw, 4.875rem);
+
+  /* Colors */
+  --color-primary-0: #cd7f32;
+  --color-primary-1: #9a6e43;
+  --color-primary-2: #854a10;
+  --color-primary-3: #e6a464;
+  --color-primary-4: #e6b686;
+  --color-primary-5: #150e07;
+  --color-primary-6: #af6f25;
+  --color-primary-6-20: #af6f2533;
+  --color-primary-7: #40270a;
+
+  --color-secondary-a-0: #cd9e32; /* Вторичный Цвет A */
+  --color-secondary-a-1: #9a7f43;
+  --color-secondary-a-2: #856210;
+  --color-secondary-a-3: #e6be64;
+  --color-secondary-a-4: #e6c986;
+
+  --color-secondary-b-0: #cd4432; /* Вторичный Цвет B */
+  --color-secondary-b-1: #9a4d43;
+  --color-secondary-b-2: #851e10;
+  --color-secondary-b-3: #e67364;
+  --color-secondary-b-4: #e69186;
+
+  --black: #150b05;
+  --white: #f3f3f3;
+  --grey: #4c4d4c;
+  --grey-dark: #1d1d1d;
+  --grey-lite: #596165;
+  --grey-liter: #c9c9c9;
+  --blue-dark: #0e1545;
+  --blue: #1e2e96;
+}
