@@ -329,6 +329,7 @@ const resetForm = () => {
   }
   &__btn {
     max-width: 300px;
+    padding: clamp(1rem, 0.375rem + 0.625vw, 1.125rem) clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
     &--sending {
       animation: smokeOut 1s ease-in-out infinite alternate;
     }

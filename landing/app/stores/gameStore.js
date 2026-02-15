@@ -42,6 +42,7 @@ export const useGameStore = defineStore('game', () => {
 
   const modal = ref('') // help и message
   const errMessage = ref('')
+  const helpArrow = ref(true)
 
   const currentWordIndex = ref(0)
   const animateStatus = ref('') // статус для анимации
@@ -53,6 +54,7 @@ export const useGameStore = defineStore('game', () => {
     words,
     modal,
     errMessage,
+    helpArrow,
     currentWordIndex,
     animateStatus,
     typedWord,

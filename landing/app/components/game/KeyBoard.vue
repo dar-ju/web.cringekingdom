@@ -1,5 +1,6 @@
 <script setup>
 import { useGameStore } from "~/stores/gameStore";
+import HelpArrow from "../svg/HelpArrow.vue";
 
 const gameStore = useGameStore();
 
@@ -60,6 +61,11 @@ const pushWordLetter = (slot, index) => {
   gameStore.keyBoardLetters[slot.originIndex].isHidden = false;
   gameStore.typedWord[index] = null;
 };
+
+const hanleHelpClick = () => {
+  gameStore.modal = "help";
+  gameStore.helpArrow = false;
+};
 </script>
 
 <template>
@@ -88,9 +94,9 @@ const pushWordLetter = (slot, index) => {
         </Transition>
       </button>
     </li>
-    <li :key="13">
+    <li :key="13" class="keyboard__letter-help">
       <button
-        @click="gameStore.modal = 'help'"
+        @click="hanleHelpClick()"
         class="keyboard__letter-btn keyboard__letter-btn--help"
         aria-label="Правила игры"
         aria-haspopup="dialog"
@@ -99,6 +105,15 @@ const pushWordLetter = (slot, index) => {
       >
         ?
       </button>
+      <Transition name="fade">
+        <div
+          v-if="gameStore.helpArrow"
+          @click="gameStore.helpArrow = false"
+          class="keyboard__help-arrow"
+        >
+          <HelpArrow />
+        </div>
+      </Transition>
     </li>
   </TransitionGroup>
 </template>
@@ -140,6 +155,16 @@ const pushWordLetter = (slot, index) => {
       display: block;
     }
   }
+  &__letter-help {
+    position: relative;
+  }
+  &__help-arrow {
+    position: absolute;
+    top: -3.5rem;
+    right: -3.5rem;
+    animation: arrow-bounce-down 1s ease-in-out infinite;
+    transform-origin: center;
+  }
 }
 
 // ANIMATION
@@ -171,5 +196,15 @@ const pushWordLetter = (slot, index) => {
   text-shadow: none;
   animation: zoomOut 0.2s forwards;
   will-change: transform, opacity;
+}
+
+@keyframes arrow-bounce-down {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-5px, 5px);
+  }
 }
 </style>

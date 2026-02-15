@@ -56,7 +56,7 @@ const startAgain = () => {
             <div class="demo__win-wrapper">
               <h2 class="demo__win-title">Отлично!</h2>
               <p class="demo__win-text">
-                У тебя есть все шансы справиться с источником кривословия - Кринжабой.
+                У тебя есть все шансы справиться с источником кривословия - злостной Кринжабой.
               </p>
               <div class="demo__win-btn-group">
                 <NuxtLink to="/#download" class="btn btn-primary">Скачать игру</NuxtLink>
