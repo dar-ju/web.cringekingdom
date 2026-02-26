@@ -47,6 +47,12 @@ onUnmounted(() => {
             <h2 class="modal__title">Сообщение</h2>
             <p class="modal__text">{{ gameStore.errMessage }}</p>
           </div>
+          <div v-else-if="gameStore.modal === 'download'" class="modal__wrapper">
+            <h2 class="modal__title">Информация</h2>
+            <p class="modal__text">
+              Игра находится в стадии тестирования.<br />Ожидаемый выход апрель 2026.
+            </p>
+          </div>
         </div>
       </div>
     </div>

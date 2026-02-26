@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+import { useGameStore } from "@/stores/gameStore";
+
+const gameStore = useGameStore();
+</script>
 
 <template>
   <section id="download" class="download">
@@ -8,7 +12,8 @@
         <div class="download__links-block">
           <p class="download__text">Начать игру Королевтво Кривословия</p>
           <div class="download__stores">
-            <NuxtLink to="#">
+            <!-- <NuxtLink @click="gameStore.modal = 'download'"> -->
+            <button @click="gameStore.modal = 'download'">
               <img
                 src="/assets/images/badge-googleplay.webp"
                 alt="Скачать игру Королевство Кривословия в Google Play"
@@ -16,8 +21,10 @@
                 width="239"
                 height="71"
               />
-            </NuxtLink>
-            <NuxtLink to="#">
+            </button>
+            <!-- </NuxtLink> -->
+            <!-- <NuxtLink to="#"> -->
+            <button @click="gameStore.modal = 'download'">
               <img
                 src="/assets/images/badge-appstore.webp"
                 alt="Скачать игру Королевство Кривословия в App Store"
@@ -25,7 +32,8 @@
                 width="239"
                 height="71"
               />
-            </NuxtLink>
+            </button>
+            <!-- </NuxtLink> -->
           </div>
           <img
             src="/assets/images/word-decor-2.webp"
@@ -75,7 +83,7 @@
     min-height: 30rem;
     padding: clamp(2.5rem, 1.82rem + 3.4vw, 5.9rem) clamp(2rem, 1.575rem + 2.125vw, 4.125rem);
     background:
-      linear-gradient(90deg, rgb(21, 11, 5) 40%, rgba(0, 0, 0, 0) 100%),
+      linear-gradient(90deg, rgb(21, 11, 5) 55%, rgba(0, 0, 0, 0) 100%),
       url("/assets/images/download-decor.webp") right/55% no-repeat,
       var(--black);
     background-size: contain;
