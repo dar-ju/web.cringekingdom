@@ -6,6 +6,9 @@ import TitleMain from "~/components/svg/TitleMain.vue";
   <section class="hero">
     <div class="container">
       <div class="hero__title-block">
+        <h1 class="visually-hidden">
+          Королевство Кривословия - словсная игра искажающая реальность
+        </h1>
         <TitleMain class="hero__title-svg" />
       </div>
       <p class="hero__slogan">Чудовища не рождаются&nbsp;&mdash; их&nbsp;создают</p>
