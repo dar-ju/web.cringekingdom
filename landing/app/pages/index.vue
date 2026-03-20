@@ -6,7 +6,7 @@ import SectionHero from "~/components/SectionHero.vue";
 import SectionMessage from "~/components/SectionMessage.vue";
 
 useSeoMeta({
-  title: "Игра в слова Королевство Кривословия &#127984;",
+  title: "Игра в слова Королевство Кривословия 🏰",
   ogTitle: "Королевство 👑 Кривословия — игра искажающая реальность",
   description:
     "Словесная игра &quot;Королевство Кривословия&quot; погружает в мир странных и пугающих вещей. Пройдите всех стражей и саму Кринжабу &#128056;!",

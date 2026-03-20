@@ -12,8 +12,8 @@ const gameStore = useGameStore();
         <div class="download__links-block">
           <p class="download__text">Начать игру Королевтво Кривословия</p>
           <div class="download__stores">
-            <!-- <NuxtLink @click="gameStore.modal = 'download'"> -->
-            <button @click="gameStore.modal = 'download'">
+            <NuxtLink to="https://play.google.com/store/apps/details?id=com.cringekingdom.game">
+              <!-- <button @click="gameStore.modal = 'download'"> -->
               <img
                 src="/assets/images/badge-googleplay.webp"
                 alt="Скачать игру Королевство Кривословия в Google Play"
@@ -21,10 +21,13 @@ const gameStore = useGameStore();
                 width="239"
                 height="71"
               />
-            </button>
-            <!-- </NuxtLink> -->
+              <!-- </button> -->
+            </NuxtLink>
             <!-- <NuxtLink to="#"> -->
-            <button @click="gameStore.modal = 'download'">
+            <button
+              @click="gameStore.modal = 'download'"
+              class="download__btn download__btn--closed"
+            >
               <img
                 src="/assets/images/badge-appstore.webp"
                 alt="Скачать игру Королевство Кривословия в App Store"
@@ -105,6 +108,11 @@ const gameStore = useGameStore();
   &__stores {
     display: flex;
     gap: 2rem;
+  }
+  &__btn {
+    &--closed {
+      filter: brightness(0.3);
+    }
   }
   &__decor {
     opacity: 0.6;
